@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    {% if latest_date_list %}
+        <ul>
+            {% for data in latest_date_list %}
+                <li><a href="/app/{{ data.id }}/">{{ data.sector}} / {{ data.well}}/{{ data.performer }}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No polls are available.</p>
+    {% endif %}
+    <button>Новый расчет</button>
+</body>
+</html>
