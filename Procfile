@@ -1,0 +1,1 @@
+web: gunicorn geolog-app.wsgi --log-file
